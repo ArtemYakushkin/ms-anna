@@ -205,15 +205,31 @@ const Text = styled.p`
 
 const Arrow = styled.button`
   flex-shrink: 0;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  border: 1px solid #5c5b5b;
+  transition: transform 0.3s ease-in-out;
+  transform: ${({ open }) => (open ? "rotate(180deg)" : "rotate(0)")};
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: transform 0.3s ease-in-out;
-  transform: ${({ open }) => (open ? "rotate(180deg)" : "rotate(0)")};
+`;
+
+const IconWrapper = styled.span`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @keyframes pulse {
+    0% {
+      scale: 1;
+    }
+    50% {
+      scale: 1.3;
+    }
+    100% {
+      scale: 1;
+    }
+  }
+
+  animation: pulse 1.5s infinite ease-in-out;
 `;
 
 const Reviews = () => {
@@ -254,8 +270,10 @@ const Reviews = () => {
                   </BoxNikname>
                   <Text open={openId === review.id}>{review.text}</Text>
                 </ItemContent>
-                <Arrow open={openId === review.id} onClick={() => toggleReview(review.id)}>
-                  <IoIosArrowDown size={30} />
+                <Arrow open={openId === review.id}>
+                  <IconWrapper>
+                    <IoIosArrowDown size={30} />
+                  </IconWrapper>
                 </Arrow>
               </Item>
             ))}

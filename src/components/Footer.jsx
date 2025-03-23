@@ -80,6 +80,7 @@ const ContactsItem = styled.li`
 
     @media (max-width: 580px) {
       flex-direction: column;
+      font-size: 18px;
     }
   }
 `;
@@ -112,6 +113,15 @@ const BottomWrapp = styled.div`
     text-align: end;
     margin-right: 40px;
     padding: 5px 0;
+  }
+
+  @media (max-width: 580px) {
+    p {
+      font-size: 8px;
+      line-height: 18px;
+      margin-right: 0px;
+      padding: 2px 0;
+    }
   }
 `;
 

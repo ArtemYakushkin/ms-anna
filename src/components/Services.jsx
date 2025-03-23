@@ -114,6 +114,57 @@ const PointList = styled.ul`
   }
 `;
 
+const BtnInfo = styled.button`
+  display: inline;
+  padding: 20px;
+  background-color: #ff5b5b9c;
+  border-radius: 35px;
+  font-weight: 500;
+  font-size: 20px;
+  color: #ffffff;
+  margin-top: 20px;
+  cursor: none;
+
+  @media (max-width: 970px) {
+    padding: 12px 20px;
+    font-size: 16px;
+    line-height: 37px;
+  }
+
+  @media (max-width: 695px) {
+    text-align: center;
+    font-size: 16px;
+  }
+`;
+
+const BtnInfoOk = styled.a`
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  background-color: #74ff5bba;
+  border-radius: 35px;
+  font-weight: 500;
+  font-size: 20px;
+  color: #ffffff;
+  margin-top: 20px;
+  transition: all 0.3s ease-in-out;
+
+  &:hover {
+    background-color: #74ff5b;
+  }
+
+  @media (max-width: 970px) {
+    padding: 12px 20px;
+    font-size: 16px;
+    line-height: 37px;
+  }
+
+  @media (max-width: 695px) {
+    text-align: center;
+    font-size: 16px;
+  }
+`;
+
 const Services = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
@@ -148,6 +199,7 @@ const Services = () => {
                   Відстеження прогресу
                 </li>
               </PointList>
+              <BtnInfo>Набір закрито</BtnInfo>
             </Item>
 
             <Item
@@ -174,6 +226,9 @@ const Services = () => {
                   Культурний обмін
                 </li>
               </PointList>
+              <BtnInfoOk href="tg://resolve?domain=AnnaYakushkina" target="_blank" rel="noreferrer">
+                Дізнатись деталі
+              </BtnInfoOk>
             </Item>
 
             <Item
@@ -200,6 +255,7 @@ const Services = () => {
                   Покращення оцінки
                 </li>
               </PointList>
+              <BtnInfo>Набір закрито</BtnInfo>
             </Item>
           </List>
         </Wrapp>
