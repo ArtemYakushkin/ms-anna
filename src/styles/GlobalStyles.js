@@ -20,6 +20,7 @@ html {
     font-family: "Montserrat", sans-serif;
     background-color: #ffffff;
     color: #5C5B5B;
+    overflow-x: hidden;
   }
 
 ul,

@@ -6,12 +6,12 @@ export const Container = styled.div`
   margin: 0 auto;
 
   @media (max-width: 768px) {
-    max-width: 808px;
+    /* max-width: 808px; */
     padding: 0 20px;
   }
 
   @media (max-width: 425px) {
-    max-width: 435px;
+    /* max-width: 435px; */
     padding: 0 5px;
   }
 

@@ -6,7 +6,7 @@ import gradient from "../assets/about-gradient.png";
 const MenuWrapper = styled.div`
   position: fixed;
   top: 0;
-  right: ${({ isOpen }) => (isOpen ? "0" : "-100%")}; /* Выезжает справа */
+  right: ${({ isOpen }) => (isOpen ? "0" : "-100%")};
   width: 250px;
   height: 100vh;
   background: rgba(255, 255, 255, 0.9);
@@ -19,10 +19,10 @@ const MenuWrapper = styled.div`
   margin-top: 60px;
   padding-top: 60px;
 
-  background-image: url(${gradient});
+  /* background-image: url(${gradient});
   background-size: cover;
   background-position: left bottom -100px;
-  background-repeat: no-repeat;
+  background-repeat: no-repeat; */
 
   @media (max-width: 425px) {
     margin-top: 47px;

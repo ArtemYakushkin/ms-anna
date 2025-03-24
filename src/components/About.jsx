@@ -1,7 +1,7 @@
 import React, { useRef } from "react";
 import styled from "styled-components";
-import { motion } from "framer-motion";
-import { useInView } from "framer-motion";
+import { motion, useInView } from "framer-motion";
+import { useMediaQuery } from "react-responsive";
 
 import { Container } from "./Container";
 
@@ -119,21 +119,23 @@ const About = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, threshold: 0.3 });
 
+  const isMobile = useMediaQuery({ maxWidth: 1100 });
+
   return (
     <Section id="about">
       <Container>
         <Wrapp>
           <ContentWrapp ref={ref}>
             <BoxImg
-              initial={{ x: -100, opacity: 0 }}
-              animate={isInView ? { x: 0, opacity: 1 } : {}}
+              initial={isMobile ? {} : { x: -100, opacity: 0 }}
+              animate={isMobile ? {} : isInView ? { x: 0, opacity: 1 } : {}}
               transition={{ duration: 2 }}
             >
               <img src={aboutImg} alt="about img" />
             </BoxImg>
             <BoxText
-              initial={{ x: 100, opacity: 0 }}
-              animate={isInView ? { x: 0, opacity: 1 } : {}}
+              initial={isMobile ? {} : { x: 100, opacity: 0 }}
+              animate={isMobile ? {} : isInView ? { x: 0, opacity: 1 } : {}}
               transition={{ duration: 2 }}
             >
               <p>Привіт. Мене звати Анна Якушкіна. </p>

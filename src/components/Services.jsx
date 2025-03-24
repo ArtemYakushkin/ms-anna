@@ -2,6 +2,7 @@ import React, { useRef } from "react";
 import styled from "styled-components";
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
+import { useMediaQuery } from "react-responsive";
 
 import { MdOutlinePerson3, MdMenuBook, MdChat } from "react-icons/md";
 import { IoMdCheckmark } from "react-icons/io";
@@ -169,6 +170,8 @@ const Services = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
+  const isMobile = useMediaQuery({ maxWidth: 1100 });
+
   return (
     <Section id="services">
       <Container>
@@ -176,8 +179,8 @@ const Services = () => {
           <Titile>Мої послуги</Titile>
           <List>
             <Item
-              initial={{ x: -100, opacity: 0 }}
-              animate={isInView ? { x: 0, opacity: 1 } : {}}
+              initial={isMobile ? {} : { x: -100, opacity: 0 }}
+              animate={isMobile ? {} : isInView ? { x: 0, opacity: 1 } : {}}
               transition={{ duration: 1 }}
             >
               <BoxTitle>
@@ -203,8 +206,8 @@ const Services = () => {
             </Item>
 
             <Item
-              initial={{ y: 100, opacity: 0 }}
-              animate={isInView ? { y: 0, opacity: 1 } : {}}
+              initial={isMobile ? {} : { y: 100, opacity: 0 }}
+              animate={isMobile ? {} : isInView ? { y: 0, opacity: 1 } : {}}
               transition={{ duration: 1 }}
             >
               <BoxTitle>
@@ -232,8 +235,8 @@ const Services = () => {
             </Item>
 
             <Item
-              initial={{ x: 100, opacity: 0 }}
-              animate={isInView ? { x: 0, opacity: 1 } : {}}
+              initial={isMobile ? {} : { x: 100, opacity: 0 }}
+              animate={isMobile ? {} : isInView ? { x: 0, opacity: 1 } : {}}
               transition={{ duration: 1 }}
             >
               <BoxTitle>

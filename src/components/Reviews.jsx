@@ -198,7 +198,7 @@ const Text = styled.p`
   font-size: 20px;
   line-height: 36px;
   color: #3e3e3e;
-  max-height: ${({ open }) => (open ? "500px" : "0")};
+  max-height: ${({ open }) => (open ? "100%" : "0")};
   overflow: hidden;
   transition: max-height 0.3s ease-in-out;
 `;
