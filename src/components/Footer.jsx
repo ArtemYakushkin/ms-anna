@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 
 import { MdOutlineMailOutline, MdOutlineLocalPhone } from "react-icons/md";
-import { FaLinkedin, FaInstagramSquare, FaTelegram } from "react-icons/fa";
+import { FaInstagramSquare, FaTelegram } from "react-icons/fa";
 
 import { Container } from "./Container";
 
