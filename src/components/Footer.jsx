@@ -163,7 +163,7 @@ const Footer = () => {
                   <FaTelegram size={60} />
                 </a>
               </SocialItem>
-              <SocialItem>
+              {/* <SocialItem>
                 <a
                   href="https://www.linkedin.com/in/anna-yakushkina-3011202a9"
                   target="_blank"
@@ -171,7 +171,7 @@ const Footer = () => {
                 >
                   <FaLinkedin size={60} />
                 </a>
-              </SocialItem>
+              </SocialItem> */}
             </SocialList>
           </TopWrapp>
         </Container>

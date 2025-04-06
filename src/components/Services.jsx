@@ -185,7 +185,7 @@ const Services = () => {
             >
               <BoxTitle>
                 <MdMenuBook size={60} />
-                <SubTitle>Групові заняття</SubTitle>
+                <SubTitle>Групові заняття для дітей 7-12 років</SubTitle>
               </BoxTitle>
               <Text>Інтерактивні уроки в мінігрупах, 4-6 учнів</Text>
               <PointList>
@@ -212,9 +212,9 @@ const Services = () => {
             >
               <BoxTitle>
                 <MdChat size={60} />
-                <SubTitle>Парні заняття</SubTitle>
+                <SubTitle>Телеграм канал для дітей 5-7 років</SubTitle>
               </BoxTitle>
-              <Text>Комунікативні сесії в парі</Text>
+              <Text>Інтерактивні відеоуроки з вчителем</Text>
               <PointList>
                 <li>
                   <IoMdCheckmark size={24} style={{ color: "#00FF0B" }} />
@@ -222,11 +222,11 @@ const Services = () => {
                 </li>
                 <li>
                   <IoMdCheckmark size={24} style={{ color: "#00FF0B" }} />
-                  Фокус на вимову
+                  Домашні завдання і чат для спілкування
                 </li>
                 <li>
                   <IoMdCheckmark size={24} style={{ color: "#00FF0B" }} />
-                  Культурний обмін
+                  Легкий старт без стресу
                 </li>
               </PointList>
               <BtnInfoOk href="tg://resolve?domain=AnnaYakushkina" target="_blank" rel="noreferrer">
@@ -241,7 +241,7 @@ const Services = () => {
             >
               <BoxTitle>
                 <MdOutlinePerson3 size={60} />
-                <SubTitle>Індивідуальні заняття</SubTitle>
+                <SubTitle>Індивідуальні заняття для рівнів А1-В1</SubTitle>
               </BoxTitle>
               <Text>Спеціалізована підготовка за запитом</Text>
               <PointList>
