@@ -1,8 +1,9 @@
 import React from "react";
 import styled from "styled-components";
 
-import { MdOutlineMailOutline, MdOutlineLocalPhone } from "react-icons/md";
+// import { MdOutlineMailOutline } from "react-icons/md";
 import { FaInstagramSquare, FaTelegram } from "react-icons/fa";
+import { MdEmail } from "react-icons/md";
 
 import { Container } from "./Container";
 
@@ -54,36 +55,36 @@ const Title = styled.h2`
   }
 `;
 
-const ContactsList = styled.ul`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 40px;
-  margin-bottom: 50px;
+// const ContactsList = styled.ul`
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+//   flex-wrap: wrap;
+//   gap: 40px;
+//   margin-bottom: 50px;
 
-  @media (max-width: 580px) {
-    gap: 20px;
-    margin-bottom: 30px;
-  }
-`;
+//   @media (max-width: 580px) {
+//     gap: 20px;
+//     margin-bottom: 30px;
+//   }
+// `;
 
-const ContactsItem = styled.li`
-  a {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    font-weight: 700;
-    font-size: 24px;
-    line-height: 29px;
-    color: #00898f;
+// const ContactsItem = styled.li`
+//   a {
+//     display: flex;
+//     align-items: center;
+//     gap: 15px;
+//     font-weight: 700;
+//     font-size: 24px;
+//     line-height: 29px;
+//     color: #00898f;
 
-    @media (max-width: 580px) {
-      flex-direction: column;
-      font-size: 18px;
-    }
-  }
-`;
+//     @media (max-width: 580px) {
+//       flex-direction: column;
+//       font-size: 18px;
+//     }
+//   }
+// `;
 
 const SocialList = styled.ul`
   display: flex;
@@ -93,6 +94,12 @@ const SocialList = styled.ul`
 `;
 
 const SocialItem = styled.li`
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
   a {
     color: #00898f;
   }
@@ -133,22 +140,21 @@ const Footer = () => {
           <TopWrapp>
             <Title>Зв’язок зі мною</Title>
 
-            <ContactsList>
+            {/* <ContactsList>
               <ContactsItem>
                 <a href="tel:+380977046004" target="_blank" rel="noreferrer">
                   <MdOutlineLocalPhone size={60} />
                   +38-097-704-60-04
                 </a>
               </ContactsItem>
-              <ContactsItem>
-                <a href="mailto:mrs.anna.teacher@gmail.com" target="_blank" rel="noreferrer">
-                  <MdOutlineMailOutline size={60} />
-                  mrs.anna.teacher@gmail.com
-                </a>
-              </ContactsItem>
-            </ContactsList>
+            </ContactsList> */}
 
             <SocialList>
+              <SocialItem>
+                <a href="tg://resolve?domain=AnnaYakushkina" target="_blank" rel="noreferrer">
+                  <FaTelegram size={60} />
+                </a>
+              </SocialItem>
               <SocialItem>
                 <a
                   href="https://www.instagram.com/start_english_today?igsh=MTdxdGJsZnQ1YWNxbQ=="
@@ -159,10 +165,11 @@ const Footer = () => {
                 </a>
               </SocialItem>
               <SocialItem>
-                <a href="tg://resolve?domain=AnnaYakushkina" target="_blank" rel="noreferrer">
-                  <FaTelegram size={60} />
+                <a href="mailto:mrs.anna.teacher@gmail.com" target="_blank" rel="noreferrer">
+                  <MdEmail size={60} />
                 </a>
               </SocialItem>
+
               {/* <SocialItem>
                 <a
                   href="https://www.linkedin.com/in/anna-yakushkina-3011202a9"
