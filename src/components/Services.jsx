@@ -102,7 +102,7 @@ const PointList = styled.ul`
   display: flex;
   flex-direction: column;
   gap: 16px;
-  margin-top: auto;
+  margin-bottom: 20px;
 
   li {
     display: flex;
@@ -115,6 +115,30 @@ const PointList = styled.ul`
   }
 `;
 
+const Prices = styled.p`
+  margin-bottom: 20px;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 19px;
+  color: #ffffff;
+  text-align: center;
+
+  span {
+    position: relative;
+
+    &::after {
+      position: absolute;
+      content: "";
+      top: 50%;
+      left: 0px;
+      width: 100%;
+      height: 2px;
+      background-color: #ff0000;
+      transform: rotate(-7deg);
+    }
+  }
+`;
+
 const BtnInfo = styled.button`
   display: inline;
   padding: 20px;
@@ -123,7 +147,9 @@ const BtnInfo = styled.button`
   font-weight: 500;
   font-size: 20px;
   color: #ffffff;
-  margin-top: 20px;
+  /* margin-top: 20px; */
+  margin-top: auto;
+
   cursor: none;
 
   @media (max-width: 970px) {
@@ -147,7 +173,9 @@ const BtnInfoOk = styled.a`
   font-weight: 500;
   font-size: 20px;
   color: #ffffff;
-  margin-top: 20px;
+  /* margin-top: 20px; */
+  margin-top: auto;
+
   transition: all 0.3s ease-in-out;
 
   &:hover {
@@ -187,7 +215,10 @@ const Services = () => {
                 <MdMenuBook size={60} />
                 <SubTitle>Групові заняття для дітей 7-12 років</SubTitle>
               </BoxTitle>
-              <Text>Інтерактивні уроки в мінігрупах, 4-6 учнів</Text>
+              <Text>
+                Інтерактивні уроки в мінігрупах,
+                <br /> 4-6 учнів
+              </Text>
               <PointList>
                 <li>
                   <IoMdCheckmark size={24} style={{ color: "#00FF0B" }} />
@@ -214,7 +245,10 @@ const Services = () => {
                 <MdChat size={60} />
                 <SubTitle>Телеграм канал для дітей 5-7 років</SubTitle>
               </BoxTitle>
-              <Text>Інтерактивні відеоуроки з вчителем</Text>
+              <Text>
+                Інтерактивні відеоуроки
+                <br /> з вчителем
+              </Text>
               <PointList>
                 <li>
                   <IoMdCheckmark size={24} style={{ color: "#00FF0B" }} />
@@ -222,15 +256,18 @@ const Services = () => {
                 </li>
                 <li>
                   <IoMdCheckmark size={24} style={{ color: "#00FF0B" }} />
-                  Домашні завдання і чат для спілкування
+                  Домашні завдання і чат
                 </li>
                 <li>
                   <IoMdCheckmark size={24} style={{ color: "#00FF0B" }} />
                   Легкий старт без стресу
                 </li>
               </PointList>
+              <Prices>
+                <span>1500грн.</span> 450грн./місяць
+              </Prices>
               <BtnInfoOk href="tg://resolve?domain=AnnaYakushkina" target="_blank" rel="noreferrer">
-                Дізнатись деталі
+                Приєднатись
               </BtnInfoOk>
             </Item>
 
@@ -243,7 +280,10 @@ const Services = () => {
                 <MdOutlinePerson3 size={60} />
                 <SubTitle>Індивідуальні заняття для рівнів А1-В1</SubTitle>
               </BoxTitle>
-              <Text>Спеціалізована підготовка за запитом</Text>
+              <Text>
+                Спеціалізована підготовка
+                <br /> за запитом
+              </Text>
               <PointList>
                 <li>
                   <IoMdCheckmark size={24} style={{ color: "#00FF0B" }} />
