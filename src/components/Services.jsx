@@ -125,8 +125,10 @@ const Prices = styled.p`
 
   span {
     position: relative;
+    color: #ff0000;
+    text-decoration: underline;
 
-    &::after {
+    /* &::after {
       position: absolute;
       content: "";
       top: 50%;
@@ -135,7 +137,7 @@ const Prices = styled.p`
       height: 2px;
       background-color: #ff0000;
       transform: rotate(-7deg);
-    }
+    } */
   }
 `;
 
@@ -264,7 +266,7 @@ const Services = () => {
                 </li>
               </PointList>
               <Prices>
-                <span>1500грн.</span> 450грн./місяць
+                <span>Free</span> - 3 дні 600грн./місяць
               </Prices>
               <BtnInfoOk href="tg://resolve?domain=AnnaYakushkina" target="_blank" rel="noreferrer">
                 Приєднатись
