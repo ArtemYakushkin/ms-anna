@@ -300,7 +300,7 @@ const Hero = () => {
             <StatsContainer>
               <StatCard>
                 <span>300+</span>
-                <p>задоволених учнів</p>
+                <p>успішних учнів</p>
               </StatCard>
               <StatCard>
                 <span>15+</span>

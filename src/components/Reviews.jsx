@@ -245,7 +245,7 @@ const Reviews = () => {
     <Section id="reviews">
       <Container>
         <Wrapp ref={ref}>
-          <Title>Зворотній зв’язок від батьків</Title>
+          <Title>Зворотній зв’язок</Title>
 
           <ItemWrapp
             initial={{ x: -100, opacity: 0 }}
