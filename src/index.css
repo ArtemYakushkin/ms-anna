@@ -8,6 +8,106 @@
 800 — ExtraBold (Очень жирный) 
 900 — Black (Чёрный, экстражирный) */
 
-/* import styled from "styled-components"; */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Unbounded:wght@200..900&display=swap');
 
-/* import { Container } from "./Container"; */
+@import './styles/header.css';
+@import './styles/hero.css';
+@import './styles/mobileMenu.css';
+@import './styles/about.css';
+@import './styles/services.css';
+@import './styles/reviews.css';
+@import './styles/footer.css';
+
+*,
+::after,
+::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+:root {
+    --color-light: #E1E2E1;
+    --color-grey: #34495E;
+    --color-blue: #1B3B6F;
+    --color-dark: #0D1B2A;
+    --color-accent: #9000d1;
+}
+
+body {
+    font-family: "Montserrat", sans-serif;
+    font-size: 16px;
+    background: linear-gradient(90deg,
+            rgba(225, 226, 225, 1) 33%,
+            rgba(52, 73, 94, 0.6) 58%,
+            rgba(27, 59, 111, 0.77) 87%,
+            rgba(13, 27, 42, 0.89) 100%);
+    color: var(--color-dark);
+    overflow-x: hidden;
+}
+
+ul,
+li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin: 0;
+    padding: 0;
+}
+
+button {
+    border: none;
+    background: transparent;
+    padding: 0;
+    cursor: pointer;
+    color: inherit;
+    font-family: "Montserrat", sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+input,
+textarea {
+    outline: none;
+    border: none;
+    font-family: inherit;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+.container {
+    max-width: 1280px;
+    padding: 0 40px;
+    margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 0 20px;
+    }
+}
+
+@media (max-width: 425px) {
+    .container {
+        padding: 0 5px;
+    }
+}
