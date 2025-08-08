@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 import MobileMenu from "./MobileMenu";
 
@@ -7,6 +7,19 @@ import Logo from "../assets/Logo2.png";
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
+  const navigate = useNavigate();
+
+  const handleScrollToServices = (e) => {
+    e.preventDefault();
+    if (window.location.pathname === "/") {
+      // Уже на главной → прокручиваем
+      const section = document.getElementById("services");
+      section?.scrollIntoView({ behavior: "smooth" });
+    } else {
+      // На другой странице → переходим с якорем
+      navigate("/#services");
+    }
+  };
 
   return (
     <header className="header">
@@ -18,7 +31,10 @@ const Header = () => {
 
           <ul className="header-list">
             <li className="header-item">
-              <Link to={"/"}>Головна</Link>
+              {/* <Link to={"/"}>Послуги</Link> */}
+              <a href="/#services" onClick={handleScrollToServices}>
+                Послуги
+              </a>
             </li>
             <li className="header-item">
               <Link to={"/about"}>Про мене</Link>
